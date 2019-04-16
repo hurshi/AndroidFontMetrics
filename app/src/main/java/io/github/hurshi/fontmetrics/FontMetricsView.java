@@ -1,4 +1,4 @@
-package net.studymongolian.fontmetrics;
+package io.github.hurshi.fontmetrics;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,6 @@ import android.graphics.Rect;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Toast;
 
 
 public class FontMetricsView extends View {
@@ -52,12 +51,12 @@ public class FontMetricsView extends View {
     }
 
     private void init() {
-        mText = "My text line";
+        mText = "";
         mTextSize = DEFAULT_FONT_SIZE_PX;
         mTextPaint = new TextPaint();
         mTextPaint.setAntiAlias(true);
         mTextPaint.setTextSize(mTextSize);
-        mTextPaint.setColor(Color.BLACK);
+        mTextPaint.setColor(getResources().getColor(R.color.txtColor));
 
         mLinePaint = new Paint();
         mLinePaint.setColor(Color.RED);
@@ -114,7 +113,7 @@ public class FontMetricsView extends View {
         super.onDraw(canvas);
 
         // center the text baseline vertically
-        int verticalAdjustment = this.getHeight() / 2;
+        int verticalAdjustment = this.getHeight() * 5 / 7;
         canvas.translate(0, verticalAdjustment);
 
         float startX = getPaddingLeft();
@@ -150,16 +149,13 @@ public class FontMetricsView extends View {
         if (mIsDescentVisible) {
             startY = mTextPaint.getFontMetrics().descent;
             stopY = startY;
-            //mLinePaint.setColor(Color.BLUE);
             canvas.drawLine(startX, startY, stopX, stopY, mDescentPaint);
         }
 
         if (mIsBottomVisible) {
             startY = mTextPaint.getFontMetrics().bottom;
             stopY = startY;
-            // mLinePaint.setColor(ORANGE);
-            mLinePaint.setColor(Color.RED);
-            canvas.drawLine(startX, startY, stopX, stopY, mBaselinePaint);
+            canvas.drawLine(startX, startY, stopX, stopY, mBottomPaint);
         }
 
         if (mIsBoundsVisible) {

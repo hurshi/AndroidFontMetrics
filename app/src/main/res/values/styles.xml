@@ -7,12 +7,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    
+
+
     <style name="Theme.AppCompat.CheckBoxAscent">
         <item name="colorControlActivated">@color/ascent</item>
     </style>
-
-
     <style name="Theme.AppCompat.CheckboxTop">
         <item name="colorControlActivated">@color/top</item>
     </style>
