@@ -1,7 +1,11 @@
 # Android FontMetrics
-An Android app for measuring and testing FontMetrics
+An Android app for measuring and testing FontMetrics forked from [suragch/AndroidFontMetrics](https://github.com/suragch/AndroidFontMetrics)
 
-![App preview](./imgs/screenshot.png?raw=true)
+| Normal                                         | TextView                                        |
+| ---------------------------------------------- | ----------------------------------------------- |
+| ![App preview](./imgs/screenshot.png?raw=true) | ![App preview](./imgs/screenshot2.png?raw=true) |
+
+
 
 This app was originally created and used for these Stack Overflow questions:
 

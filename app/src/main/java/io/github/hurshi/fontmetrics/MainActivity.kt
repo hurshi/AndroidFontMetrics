@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateTextViews() {
         myFontMetricsView.setText(etTextString.text.toString())
-        myFontMetricsView.setTextSizeInPixels(350)
+        myFontMetricsView.setTextSizeInPixels(300)
         tvTop.text = myFontMetricsView.fontMetrics.top.toString()
         tvAscent.text = myFontMetricsView.fontMetrics.ascent.toString()
         tvBaseline.text = (0f).toString()
