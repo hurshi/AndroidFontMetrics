@@ -1,10 +1,12 @@
 package io.github.hurshi.fontmetrics
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import io.github.hurshi.fontmetrics.textview_style.TextViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -20,12 +22,6 @@ class MainActivity : AppCompatActivity() {
     private fun initClick() {
         updateButton.setOnClickListener {
             myFontMetricsView.setText(etTextString.text.toString())
-            var fontSize: Int = try {
-                Integer.valueOf(etTextString.text.toString())
-            } catch (e: NumberFormatException) {
-                FontMetricsView.DEFAULT_FONT_SIZE_PX
-            }
-            myFontMetricsView.setTextSizeInPixels(fontSize)
             updateTextViews()
             hideKeyboard(currentFocus)
         }
@@ -36,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         cbBottom.setOnClickListener { myFontMetricsView.setBottomVisible(cbBottom.isChecked); }
         cbTextBounds.setOnClickListener { myFontMetricsView.setBoundsVisible(cbTextBounds.isChecked); }
         cbWidth.setOnClickListener { myFontMetricsView.setWidthVisible(cbWidth.isChecked); }
+        toTextViewActivity.setOnClickListener { startActivity(Intent(this, TextViewActivity::class.java)) }
     }
 
     private fun updateTextViews() {

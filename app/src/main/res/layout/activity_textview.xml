@@ -6,19 +6,21 @@
         android:background="#333"
         android:layout_height="match_parent">
 
-
-    <com.otaliastudios.zoom.ZoomLayout
+    <RelativeLayout
             android:id="@+id/fontLayout"
             android:layout_width="match_parent"
-            android:layout_margin="20dp"
-            android:layout_height="300dp">
-        <io.github.hurshi.fontmetrics.FontMetricsView
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+        <io.github.hurshi.fontmetrics.textview_style.FontMetricsTextView
                 android:id="@+id/myFontMetricsView"
-                android:layout_width="400dp"
-                android:layout_height="300dp"
-                android:background="#444"
-                android:padding="20dp"/>
-    </com.otaliastudios.zoom.ZoomLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="110sp"
+                android:background="#444"/>
+    </RelativeLayout>
 
     <ScrollView
             android:layout_width="match_parent"
@@ -224,12 +226,20 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/darker_gray"/>
 
-            <Button android:id="@+id/toTextViewActivity"
+            <TextView
+                    android:id="@+id/tvSizeLabel"
                     android:layout_width="wrap_content"
-                    android:text="TextView Style"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvLeadingLabel"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_marginLeft="33dp"
+                    android:layout_marginTop="10dp"
+                    android:text="textview size:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"/>
         </RelativeLayout>
+
+
     </ScrollView>
+
+
 </RelativeLayout>
