@@ -3,7 +3,7 @@ An Android app for measuring and testing FontMetrics forked from [suragch/Androi
 
 | Normal                                         | TextView                                        |
 | ---------------------------------------------- | ----------------------------------------------- |
-| ![App preview](./imgs/screenshot.png?raw=true) | ![App preview](./imgs/screenshot2.png?raw=true) |
+| ![App preview](./imgs/screenshot1.png?raw=true) | ![App preview](./imgs/screenshot2.png?raw=true) |
 
 
 
